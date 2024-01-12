@@ -1,0 +1,32 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { UserauthComponent } from './userauth.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
+
+
+@NgModule({
+  declarations: [
+    RegistrationComponent,
+    LoginComponent,
+    UserauthComponent,
+    NavbarComponent
+  ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule
+  ],
+  exports:[
+    LoginComponent,
+    RegistrationComponent,
+    NavbarComponent
+  ]
+})
+export class UserauthModule { }

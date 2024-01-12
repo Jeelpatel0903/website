@@ -1,0 +1,16 @@
+{
+  "UserRegistr": [
+    {
+      "Username": "jeel",
+      "Useremail": "jeel@btl.com",
+      "UserPassword": "1234",
+      "id": 1
+    },
+    {
+      "Username": "arjun",
+      "Useremail": "arjun@btl.com",
+      "UserPassword": "0000",
+      "id": 2
+    }
+  ]
+}
