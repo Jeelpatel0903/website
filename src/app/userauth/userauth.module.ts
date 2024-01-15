@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { UserauthComponent } from './userauth.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -15,7 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegistrationComponent,
     LoginComponent,
     UserauthComponent,
-    NavbarComponent
+
   ],
   imports: [
     CommonModule,
@@ -26,7 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   exports:[
     LoginComponent,
     RegistrationComponent,
-    NavbarComponent
+
   ]
 })
 export class UserauthModule { }

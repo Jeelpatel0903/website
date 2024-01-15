@@ -11,15 +11,12 @@ export class HomeComponent implements OnInit {
   constructor() {
     HomeComponent.login = true;
    }
-   
+
   ngOnInit(): void {
-    HomeComponent.login = true;
-    
+   
   }
 
   logoutfunction(){
-    HomeComponent.login = false;
-    this.ngOnInit()
 
   }
 }

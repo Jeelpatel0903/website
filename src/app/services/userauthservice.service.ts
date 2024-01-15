@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
+import { User } from '../datamodel/UserModel';
 
 @Injectable({
   providedIn: 'root'
@@ -11,18 +13,18 @@ export class UserauthserviceService {
   url="http://localhost:3000/UserRegistr"
   // logurl="http://localhost:3000"
 
-    
+
   userregisterapi(data:any){
     return this.http.post(this.url,data);
   }
 
-  getuserdata(){
-    return this.http.get(`${this.url}`);
+  getuserdata():Observable<User[]>{
+    return this.http.get<User []>(`${this.url}`);
   }
 
   loginUser(data: any) {
-    
+
   }
-  
+
 
 }

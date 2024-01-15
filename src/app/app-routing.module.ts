@@ -4,22 +4,33 @@ import { UserauthModule } from './userauth/userauth.module';
 import { LoginComponent } from './userauth/login/login.component';
 import { RegistrationComponent } from './userauth/registration/registration.component';
 import { HomeComponent } from './home/home.component';
+import { AddproductformComponent } from './home/addproductform/addproductform.component';
+import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
 
 const routes: Routes = [
   {
-    path:"login",
-    component:LoginComponent,
+    path: "login",
+    component: LoginComponent,
 
   },
   {
-    path:"register",
-    component:RegistrationComponent,
+    path: "register",
+    component: RegistrationComponent,
   },
   {
-    path:"home",
-    component:HomeComponent,
-  }
-]; 
+    path: "home",
+    component: HomeComponent,
+    children:[{
+      path: "addproductform",
+      component: AddproductformComponent,
+    },
+    {
+      path: "viewproduct",
+      component: ViewproductComponent,
+    }
+  ]
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

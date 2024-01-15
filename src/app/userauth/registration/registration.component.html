@@ -24,17 +24,15 @@
                                     <input type="password" ngModel name="UserPassword"  class="form-control form-control-lg" placeholder="Enter your Password" />
                                 </div>
                                 <div class="form-check d-flex justify-content-center mb-5">
-                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" disabled/>
-                                    <label class="form-check-label" for="form2Example3g">
-                                        I agree all statements in <a href="#!" class="text-body"><u>Terms of
-                                                service</u></a>
-                                    </label>
+                                  <p class="small fw-bold mt-2 pt-1 mb-0">User Have Already Account<a [routerLink]="['/login']"
+                                  class="link-danger">Register</a></p>
+
                                 </div>
 
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
                                 </div>
-                                    </form>
+                              </form>
                         </div>
                     </div>
                 </div>
