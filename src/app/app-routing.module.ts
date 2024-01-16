@@ -6,6 +6,7 @@ import { RegistrationComponent } from './userauth/registration/registration.comp
 import { HomeComponent } from './home/home.component';
 import { AddproductformComponent } from './home/addproductform/addproductform.component';
 import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
+import { WishlistComponent } from './home/wishlist/wishlist.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
     {
       path: "viewproduct",
       component: ViewproductComponent,
+    },
+    {
+      path: "wishlist",
+      component: WishlistComponent,
     }
   ]
   },

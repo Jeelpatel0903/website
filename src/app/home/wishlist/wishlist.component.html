@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h2 class="mt-5 mb-4">Wish List</h2>
+  
+    <div class="row" *ngIf="wishlistdata.length > 0; else noData">
+      <div class="col-md-4 product-card" *ngFor="let data of wishlistdata">
+        <div class="card" style="width: 18rem;">
+          <img [src]="data.ProductImage" class="card-img-top" style="height: 300px;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{data.ProductName}}</h5>
+            <p class="card-text">{{data.ProductCategory}}</p>
+            <p class="card-text">{{data.ProductPrice}}</p>
+            <!-- <p class="card-text">{{data.ProductAddDate}}</p> -->
+            <a href="#" class="btn btn-primary">Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <ng-template #noData>
+      <div class="alert alert-info">
+        <h1>No products available  in your wishlist</h1>
+      </div>
+    </ng-template>
+  </div>
+  

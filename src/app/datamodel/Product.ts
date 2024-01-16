@@ -1,8 +1,10 @@
 export interface Product{
-  Productid:number
+  id:number
   ProductName : string
   ProductCategory : string
   ProductPrice : number
   ProductImage : string
+  ProductWishlist : boolean
+  // ProductAddDate: string
 
 }

@@ -12,10 +12,21 @@ export class ProductService {
   url = "http://localhost:3000/Products";
 
   Addproductdataservice(data: Product) {
+    // var d = new Date().toLocaleString(); for adding time in whene data is add 
+    // data.ProductAddDate = d;
+      data.ProductWishlist = false;
     return this.productapi.post(this.url, data);
   }
 
   ViewProductservice(){
     return this.productapi.get<Product []>(this.url);
+  }
+
+  Addproductinwishlist(data:Product){
+    const wishlistUrl = `${this.url}/${data.id}`;
+    console.log("jkhsdk",wishlistUrl);
+    
+    return this.productapi.put(wishlistUrl,data)
+    
   }
 }

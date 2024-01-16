@@ -5,7 +5,7 @@
   <div class="row mb-3">
     <div class="col-md-2">
       <button class="btn btn-primary" >
-        All Product <span class="badge bg-secondary" (click)="filterelectornic('ALL')">{{alldata.length}}</span>
+        All Product <span class="badge bg-secondary" (click)="filterelectornic('ALL')">{{allfill}}</span>
       </button>
     </div>
     <div class="col-md-2">
@@ -27,23 +27,38 @@
   </div>
 
 
-  <div class="row" *ngIf="filterdata && filterdata.length > 0; else noData">
-    <!-- Product Cards -->
-    <div class="col-md-4 product-card" *ngFor="let data of filterdata">
+  <div class="row" *ngIf="alldata.length > 0; else noData">
+    <div class="col-md-4 product-card" *ngFor="let data of alldata">
       <div class="card" style="width: 18rem;">
         <img [src]="data.ProductImage" class="card-img-top" style="height: 300px;" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{data.ProductName}}</h5>
           <p class="card-text">{{data.ProductCategory}}</p>
-          <p class="card-text">{{data.ProductPrice}}</p>
+          <p class="card-text">{{data.ProductPrice}}</p>  
+          <!-- <p class="card-text">{{data.ProductAddDate}}</p> -->
           <a href="#" class="btn btn-primary">Buy</a>
-          <a href="#" class="btn btn-success" style="margin-left:20p;">Wish Lsit</a>
+          <a  *ngIf="data.ProductWishlist === true" class="btn btn-secondary" style="margin-left:20p;" style="margin-left: 10px;" (click)="addwishlist(data)">remove</a>
+          <a   *ngIf="data.ProductWishlist  === false" class="btn btn-success" style="margin-left:20p;" style="margin-left: 10px;" (click)="addwishlist(data)">Add wishlist</a>
+
         </div>
       </div>
     </div>
   </div>
-
-
+<!-- 
+  <ng-template *ngIf="(filterdata && filterdata.length > 0)">
+    <div class="col-md-4 product-card" *ngFor="let datafill of filterdata">
+      <div class="card" style="width: 18rem;">
+        <img [src]="datafill.ProductImage" class="card-img-top" style="height: 300px;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{datafill.ProductName}}</h5>
+          <p class="card-text">{{datafill.ProductCategory}}</p>
+          <p class="card-text">{{datafill.ProductPrice}}</p>
+          <a href="#" class="btn btn-primary">Buy</a>  
+          <a href="#" class="btn btn-success" style="margin-left:20p;">Wish Lsit</a>
+        </div>
+      </div>
+    </div>
+  </ng-template> -->
 
   <!-- Alternative Content if no data -->
   <ng-template #noData>
