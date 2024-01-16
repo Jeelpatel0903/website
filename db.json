@@ -19,7 +19,7 @@
       "ProductCategory": "Clothing",
       "ProductPrice": 423423,
       "ProductImage": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTDum2KNlvyO_-Jt2fy_ck33ndpfIFZSjvpW0f1h5st1Z7RbRz20aLYTFkCrCO5",
-      "ProductWishlist": false,
+      "ProductWishlist": true,
       "id": 1
     },
     {
@@ -28,7 +28,7 @@
       "ProductPrice": 60000,
       "ProductImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjJmyyzfxbm-J3p4PVP_VSPsC3S0uq5U6LQQ&usqp=CAU",
       "id": 2,
-      "ProductWishlist": false
+      "ProductWishlist": true
     },
     {
       "ProductName": "samsung mobile",
