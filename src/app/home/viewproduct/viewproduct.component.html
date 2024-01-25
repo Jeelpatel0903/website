@@ -36,7 +36,7 @@
           <p class="card-text">{{data.ProductCategory}}</p>
           <p class="card-text">{{data.ProductPrice}}</p>  
           <!-- <p class="card-text">{{data.ProductAddDate}}</p> -->
-          <a href="#" class="btn btn-primary">Buy</a>
+          <a routerLink="../productdetails" [queryParams]="{id:data.id}" class="btn btn-primary" >Buy</a>
           <a  *ngIf="data.ProductWishlist === true" class="btn btn-secondary" style="margin-left:20p;" style="margin-left: 10px;" (click)="addwishlist(data)">remove</a>
           <a   *ngIf="data.ProductWishlist  === false" class="btn btn-success" style="margin-left:20p;" style="margin-left: 10px;" (click)="addwishlist(data)">Add wishlist</a>
 
@@ -67,3 +67,4 @@
     </div>
   </ng-template>
 </div>
+<!-- <router-outlet></router-outlet> -->

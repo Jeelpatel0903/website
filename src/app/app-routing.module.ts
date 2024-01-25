@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AddproductformComponent } from './home/addproductform/addproductform.component';
 import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
 import { WishlistComponent } from './home/wishlist/wishlist.component';
+import { ProductdetailsComponent } from './home/productdetails/productdetails.component';
 
 const routes: Routes = [
   {
@@ -24,15 +25,19 @@ const routes: Routes = [
     children:[{
       path: "addproductform",
       component: AddproductformComponent,
+    },{
+      path: "productdetails",
+      component: ProductdetailsComponent,
     },
     {
       path: "viewproduct",
       component: ViewproductComponent,
+      
     },
     {
       path: "wishlist",
       component: WishlistComponent,
-    }
+    },
   ]
   },
 ];

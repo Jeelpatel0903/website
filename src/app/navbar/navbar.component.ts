@@ -7,7 +7,7 @@ import { ProductService } from '../services/product.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor(private api:ProductService) { }
   countnumber:number = 0

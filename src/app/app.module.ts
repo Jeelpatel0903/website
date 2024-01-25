@@ -11,6 +11,7 @@ import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WishlistComponent } from './home/wishlist/wishlist.component';
+import { ProductdetailsComponent } from './home/productdetails/productdetails.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { WishlistComponent } from './home/wishlist/wishlist.component';
     NavbarComponent,
     AddproductformComponent,
     ViewproductComponent,
-    WishlistComponent
+    WishlistComponent,
+    ProductdetailsComponent
 
   ],
   imports: [

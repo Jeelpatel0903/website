@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/datamodel/UserModel';
 import { ProductService } from 'src/app/services/product.service';
+import { WishlistComponent } from '../wishlist/wishlist.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-viewproduct',
@@ -19,7 +21,7 @@ export class ViewproductComponent implements OnInit {
   allfill :number = 0
   wishbtn :string = "Add Wishlist"
   
-  constructor(private api:ProductService) { 
+  constructor(private api:ProductService,private router: Router) { 
   }
 
   
@@ -36,7 +38,7 @@ export class ViewproductComponent implements OnInit {
       this.api.Addproductinwishlist(data).subscribe((responce) => {
       })
     }
-    
+    this.router.navigate(['/wishlist'])
     
   
   }

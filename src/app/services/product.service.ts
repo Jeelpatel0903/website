@@ -27,6 +27,9 @@ export class ProductService {
     console.log("jkhsdk",wishlistUrl);
     
     return this.productapi.put(wishlistUrl,data)
-    
+  }
+
+  viewprodetails(){
+    return this.productapi.get<Product []>(this.url)
   }
 }
