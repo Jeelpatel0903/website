@@ -33,4 +33,10 @@ export class ProductdetailsComponent implements OnInit {
       this.imgurl = this.prodata.ProductImage
     })
 }
+
+addtocard(){
+  this.proservice.addtocardservice(this.prodata!).subscribe((s)=>
+  alert("addto crad")
+  )
+}
 }

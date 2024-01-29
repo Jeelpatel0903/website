@@ -8,8 +8,15 @@ import { AddproductformComponent } from './home/addproductform/addproductform.co
 import { ViewproductComponent } from './home/viewproduct/viewproduct.component';
 import { WishlistComponent } from './home/wishlist/wishlist.component';
 import { ProductdetailsComponent } from './home/productdetails/productdetails.component';
+import { AddtocartComponent } from './addtocart/addtocart.component';
 
 const routes: Routes = [
+  {
+    path: "",
+    redirectTo:"register",
+    pathMatch:"full"
+
+  },
   {
     path: "login",
     component: LoginComponent,
@@ -37,6 +44,10 @@ const routes: Routes = [
     {
       path: "wishlist",
       component: WishlistComponent,
+    },
+    {
+      path: "addtocart",
+      component: AddtocartComponent,
     },
   ]
   },

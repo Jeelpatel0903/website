@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WishlistComponent } from './home/wishlist/wishlist.component';
 import { ProductdetailsComponent } from './home/productdetails/productdetails.component';
+import { AddtocartComponent } from './addtocart/addtocart.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProductdetailsComponent } from './home/productdetails/productdetails.co
     AddproductformComponent,
     ViewproductComponent,
     WishlistComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    AddtocartComponent
 
   ],
   imports: [
