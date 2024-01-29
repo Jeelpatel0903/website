@@ -24,12 +24,16 @@ export class ProductService {
 
   Addproductinwishlist(data:Product){
     const wishlistUrl = `${this.url}/${data.id}`;
-    console.log("jkhsdk",wishlistUrl);
+    // console.log("jkhsdk",wishlistUrl);
     
     return this.productapi.put(wishlistUrl,data)
   }
 
-  viewprodetails(){
-    return this.productapi.get<Product []>(this.url)
+  viewprodetails(id:number){
+    const viewproduct = `${this.url}/${id}`
+    console.log(viewproduct);
+    
+    return this.productapi.get<Product>(viewproduct)
+    
   }
 }

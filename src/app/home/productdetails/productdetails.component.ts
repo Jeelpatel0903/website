@@ -13,25 +13,24 @@ export class ProductdetailsComponent implements OnInit {
   constructor(private activ:ActivatedRoute,private proservice:ProductService) { }
 
   getid:number | null = null
-  prodata:Product[] = []
+  prodata:Product | null = null
   showdata:Product[] = []
   imgurl:string | null = null
+  productname:string | null = null
+  category:string | null = null
+  productprice:number | null = null
   index:number = 0
 
   ngOnInit(): void {
     this.activ.queryParamMap.subscribe((e)=>{
      this.getid = Number(e.get('id'))
-     console.log(this.getid);
     })
-    this.proservice.ViewProductservice().subscribe((data)=>{
+    this.proservice.viewprodetails(this.getid!).subscribe((data)=>{
       this.prodata = data
-      this.index = this.prodata.findIndex((i)=>{
-        return this.getid === i.id 
-      })
-      
-  })
-  
-
-
+      this.productname = this.prodata.ProductName
+      this.category = this.prodata.ProductCategory
+      this.productprice = this.prodata.ProductPrice
+      this.imgurl = this.prodata.ProductImage
+    })
 }
 }
